@@ -1,5 +1,4 @@
 var sidebar = document.getElementById('sidebar');
-var sidebar_closed = document.getElementById('sidebar-closed');
 var sidebar_open = document.getElementById('sidebar-open');
 var menu_btn = document.getElementById('menu-btn');
 var back_btn = document.getElementById('back-btn');
@@ -14,30 +13,30 @@ for(i=0; i<h1tags.length; i++){
     side_link.innerHTML = side_link.innerHTML + arr[i] ;
 }
 
-// sidebar_closed.classList.add('disable')
+sidebar_open.classList.add('disable')
 
 menu_btn.addEventListener('click', () => {
     menu_btn.classList.add('low-zindex')
-    sidebar_closed.classList.add('high-zindex')
     menu_btn.classList.remove('high-zindex')
-    sidebar_closed.classList.remove('low-zindex')
     menu_btn.classList.remove('high-opacity')
-    sidebar_closed.classList.remove('low-opacity')
     menu_btn.classList.add('low-opacity')
-    sidebar_closed.classList.add('high-opacity')
-    sidebar_closed.classList.remove('disable')
+    sidebar_open.classList.add('high-zindex')
+    sidebar_open.classList.remove('low-zindex')
+    sidebar_open.classList.remove('low-opacity')
+    sidebar_open.classList.add('high-opacity')
+    sidebar_open.classList.remove('disable')
 })
 
 back_btn.addEventListener('click', () => {
     menu_btn.classList.remove('low-zindex')
-    sidebar_closed.classList.remove('high-zindex')
+    sidebar_open.classList.remove('high-zindex')
     menu_btn.classList.add('high-zindex')
-    sidebar_closed.classList.add('low-zindex')
+    sidebar_open.classList.add('low-zindex')
     menu_btn.classList.remove('low-opacity')
-    sidebar_closed.classList.remove('high-opacity')
+    sidebar_open.classList.remove('high-opacity')
     menu_btn.classList.add('high-opacity')
-    sidebar_closed.classList.add('low-opacity')
-    sidebar_closed.classList.add('disable')
+    sidebar_open.classList.add('low-opacity')
+    sidebar_open.classList.add('disable')
 })
 
 var body = document.body; 
