@@ -25,6 +25,7 @@ menu_btn.addEventListener('click', () => {
     sidebar_open.classList.remove('low-opacity')
     sidebar_open.classList.add('high-opacity')
     sidebar_open.classList.remove('disable')
+    sidebar_open.style.display = 'flex'
 })
 
 back_btn.addEventListener('click', () => {
