@@ -1,0 +1,120 @@
+header{
+    background-color:#ee6664; 
+    text-align:center;
+    padding:10px 0px; 
+  }
+  header h1{
+    margin:0px;
+    font-size:26px; 
+    color:#414141; 
+    font-weight:1000;
+    font-family: 'Acme', sans-serif;
+  }
+  
+  h1 span{
+    font-weight:400;
+  }
+  body{
+    font-family: "Open Sans", arial;
+    color:#fff;
+    background: #666c82;  
+    margin:0;
+  }
+  .flex{
+    display:flex;
+  }
+  nav{
+    margin-top:15px;
+    background:#DAF7A6;
+    height:100%;
+    width:250px;
+    box-shadow:4px 4px 4px #3C3F35;
+    border-radius:5px;
+    margin-left:1%;
+  
+    position:sticky;
+    position:-webkit-sticky;
+    top:20px;
+  }
+  
+  nav a {
+    text-decoration:none;
+    color:BLACK;
+    font-size: 16px;
+    display:block;
+    border-bottom:1px solid #03A2A2;  
+  }
+  .fa {
+    position: relative;
+    top:12px;
+    width: 70px;
+    height: 36px;
+    text-align: center;
+    font-size:20px;
+  }
+  nav span {
+    position:relative;
+    top:12px;
+  }
+  .logo{
+    position:relative;
+    top:0px;
+    padding:1px;
+    background-color:#CCF581;
+    color:#07145D; 
+    font-family: 'Big Shoulders Display', cursive;
+    text-align:center;
+    line-height: 0.8;
+  }
+  .logo p{
+    color:black;
+  }
+  nav a:hover{
+    color:#fff;
+    background-color:#3863F4; 
+  }
+  .contents{
+    background-color:#3E414F;
+    padding:15px 30px;
+    width:75%;
+    margin:15px 3%;
+   
+    box-shadow:4px 4px 4px #3C3F35;
+    border-radius:5px;
+  }
+  
+  .contents h3{
+    border-bottom: 1px solid grey;
+    padding-bottom:10px;
+    font-family: 'Shadows Into Light', cursive;
+    margin-bottom: 20px
+  }
+  
+  .contents p{
+    text-align:justify;
+    margin-bottom:50px;
+    line-height:2;
+  }
+  footer{
+    background:#323232;
+    padding:10px;
+    height:25px;
+  
+  }
+  .left{
+    float:left;
+    margin-left:3%;
+  }
+  .right{
+    display:inline-block;
+    float:right;
+    margin-right:3%;
+  }
+  .right a{
+    color:white;
+    margin-right:8px;
+    text-decoration:none;
+  }
+  .right a:hover{
+    border-bottom: 2px solid white;
+  }

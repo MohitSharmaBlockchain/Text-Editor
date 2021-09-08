@@ -573,3 +573,7 @@ figcaption {
 .w3-modal {
     background: #fff;
 }
+
+#upper-div{
+    display: flex;
+}
