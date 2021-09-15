@@ -28,6 +28,12 @@ body {
     margin: 33.5px 0 0 36px;
     align-items: center;
     user-select: none;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+#sidebar img:hover{
+    cursor: pointer;
 }
 
 #sidebar img {

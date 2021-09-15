@@ -17,7 +17,7 @@
     <div id="upper-div">
         <div id="inner-div">
             <div id="sidebar">
-                <img src="./images/sidebar.svg" alt="">
+                <img id="sidebar-img" src="./images/sidebar.svg" alt="">
                 <span>Index</span>
             </div>
             <div id="sidebar-closed">
@@ -52,16 +52,15 @@
                     <li>Weekly Blog : <a href="https://cdli-gh.github.io/blog/gsoc21/designChallengeSomilJain/index"
                             target="_blank" rel="noopener">Blog</a></li>
                 </ul>
-                <h1 id="team">Team</h1>
-                <h1 id="jk">Mohit</h1>
-                <h1 id="asd">asdasdasddas</h1>
-                <h1 id="asdads">asdasdsa</h1>
-                <h1 id="viper">viper</h1>
+                <h1>Team</h1>
+                <h1>Mohit</h1>
+                <h1 >asdasdasddas</h1>
+                <h1 >asdasdsa</h1>
+                <h1>viper</h1>
 
                 <section class="team" style="margin-top:20px;">
                     <section class="mates" style="padding-left:0px;">
-                        <div class="mate"><img src="./images/me1.jpg" height="48px" width="48px" alt=""
-                                class="medium-zoom-image">
+                        <div class="mate">
                             <div class="mate-info" style="margin-left:12px;">
                                 <p
                                     style="margin-bottom:2px;margin-top:14px; padding-bottom:0px;line-height:10px; width:auto;">
@@ -69,8 +68,7 @@
                                 <label style="font-size:14px; margin-top:-100px;">Mentor</label>
                             </div>
                         </div>
-                        <div class="mate"><img src="./images/me2.jpg" height="48px" width="48px" alt=""
-                                class="medium-zoom-image">
+                        <div class="mate">
                             <div class="mate-info" style="margin-left:12px;">
                                 <p
                                     style="margin-bottom:2px;margin-top:14px; padding-bottom:0px;line-height:10px; width:auto;">
@@ -78,8 +76,7 @@
                                 <label style="font-size:14px; margin-top:-100px;">Mentor</label>
                             </div>
                         </div>
-                        <div class="mate"><img src="./images/me3.jpg" height="48px" width="48px" alt=""
-                                class="medium-zoom-image">
+                        <div class="mate">
                             <div class="mate-info" style="margin-left:12px;">
                                 <p
                                     style="margin-bottom:2px;margin-top:14px; padding-bottom:0px;line-height:10px; width:auto;">
@@ -90,6 +87,114 @@
                     </section>
                 </section>
             </article>
+            <section class="content">
+                <article class="markdown-section" id="main">
+                    <!-- # Admin Dashboard -->
+                    <h2 id="web-view"><a href="#/admindashboard?id=web-view" data-id="web-view" class="anchor"><span>Web
+                                view</span></a></h2>
+                    <p>This dashboard is supposed to be used by Admins and Editors. It consists of around 20 different
+                        admin function controls. The first step was to categorize them followed by deciding each
+                        category positioning based on hierarchy in terms of how frequently they are used.<br>
+                    </p>
+                    <p>In research conducted via interviews and weekly design meetings, we concluded that different
+                        users are handling different sections, the Admin dashboard is accessed through desktop as well
+                        as mobile devices, and most of the functions had 2 actions associated with them i.e. adding a
+                        new entry and viewing/editing an existing entry thus cards were the best option as a UI element
+                        for each function.</p>
+                    <div class="scroll-container same-size" id="style-4">
+                        <div class="wrap">
+                            
+                        </div>
+                    </div>
+
+
+                    <blockquote>
+                        <p>Further discussions and iterations can be accessed through <a
+                                href="https://gitlab.com/cdli/framework/-/issues/75" target="_blank"
+                                rel="noopener">Here</a></p>
+                    </blockquote>
+                    <h2 id="mobile-view"><a href="#/admindashboard?id=mobile-view" data-id="mobile-view"
+                            class="anchor"><span>Mobile view</span></a></h2>
+                    <p>Admin dashboard consists of around 20 cards that are bifurcated under six categories but
+                        bombarding the user with so many options altogether not just affect the cognition load but also
+                        increases scrolling which causes a problem in the navigation to the actual function they wanted
+                        to use, therefore I have used accordions for the categories.
+                        <br><br>
+                        <a href="https://lawsofux.com/jakobs-law/" target="_blank" rel="noopener">Jakob’s law</a> states
+                        that users spend most of their time on other sites, which suggest that it is preferred that your
+                        site to work the same way as all the other sites they already know. So I have used the circular
+                        button at the bottom-right corner because users who are going to the user admin dashboard were
+                        very familiar with the mobile interface of apps like Gmail and Slack
+                    </p>
+                    ## Raw Image Scan
+
+
+                    <p style="margin-bottom:0px;">An cuboidal artifact consists of 6 side:</p>
+
+                    <ul>
+                        <li>Obverse (O)</li>
+                        <li>Reverse (R)</li>
+                        <li>Left Edge (LE)</li>
+                        <li>Right Edge (RE)</li>
+                        <li>Top Edge (TE)</li>
+                        <li>Bottom Edge (BE)</li>
+                    </ul>
+                    <p>In order to digitize it, the backend was developed in such a way that an artifact's each side is
+                        either scanned using a scanner or photos are taken using a DSLR, each scan can be up to 70 MB. A
+                        user with admin dashboard access is supposed to save its name as "ArtifactID_edgeName'' (eg.
+                        247_O where 247 is Artifact ID and O stands for Obverse face.), and after successfully uploading
+                        them, a black background is added to each scan and all 6 sides are stacked together.</p>
+
+       
+
+                    <blockquote>
+                        <p>Problem : There was no reference for the set of rules that should be followed for uploading
+                            images and there were substantial chances of error of using wrong naming convention and then
+                            that scan has to be renamed and uploaded again..</p>
+                    </blockquote>
+                    <h1>Zoom</h1>
+                    <h4 id="solution-"><a href="#/admindashboard?id=solution-" data-id="solution-"
+                            class="anchor"><span>Solution :</span></a></h4>
+                    <p>Since some sides can be identified even after looking at it, an option to preview and rename even
+                        after uploading will save plenty of time and reduce the chances of further mistakes. Also since
+                        this task consists of various stages, using a stepper will keep the users updated on the
+                        progress and since the whole upload process is dependent on naming conventions, a user must go
+                        through a naming convention hence should be the first step before continuing to upload, which is
+                        a very redundant process.</p>
+                    <div id="skeleton">
+                        <div class="scroll-container same-size" id="style-4" style="margin-bottom:0px !important">
+                            <div class="wrap">
+                            
+                            </div>
+                        </div>
+                        <div id="imagetext"> Stepper 1: Naming Conventions </div>
+                    </div>
+                    <div id="skeleton">
+                        <div class="scroll-container same-size" id="style-4" style="margin-bottom:0px !important">
+                            <div class="wrap">
+                               
+                            </div>
+                        </div>
+                        <div id="imagetext"> Stepper 2: Choose Files </div>
+                    </div>
+                    <div id="skeleton">
+                        <div class="scroll-container same-size" id="style-4" style="margin-bottom:0px !important">
+                            <div class="wrap">
+                             
+                            </div>
+                        </div>
+                        <div id="imagetext"> Stepper 3: Edit/start uploading</div>
+                    </div>
+                    <h1>JP</h1>
+
+                    <blockquote>
+                        <p>UI consisting of edge cases like different error, their handling, preview, in progress, and
+                            the upload completion process can be found <a
+                                href="https://www.figma.com/file/LA1138Ao8EqY1YcG5NLKhiZy/CDLI?node-id=2672%3A11759"
+                                target="_blank" rel="noopener">here</a></p>
+                    </blockquote>
+                </article>
+            </section>
         </div>
     </div>
     <script src="./index.js"></script>
