@@ -83,7 +83,7 @@ body {
     margin: 27px 0 0 33px;
     position: sticky;
     top: 27px;
-    display: none;
+    display: flex;
     opacity: 0;
     gap: 12px;
     transition: opacity 1s ease-out;
@@ -94,6 +94,9 @@ body {
     align-self: baseline;
     height: 1rem;
     margin-top: 7.5px;
+}
+#back-btn:hover {
+    cursor: pointer;
 }
 
 #side-link {
@@ -110,5 +113,20 @@ body {
 }
 
 #text-area {
-    margin: 0 300px;
+    margin: auto;
+    width: 715px;
+}
+.position-relative{
+    position: relative;
+}
+.side-link-span{
+    display: none;
+    position: absolute;
+    top: 4.5px;
+    left: 270px;
+    background-color: black;
+    color: white;
+}
+#inner-div{
+    position: absolute;
 }
