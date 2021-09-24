@@ -9,9 +9,15 @@ var text_area = document.getElementById('text-area')
 
 var arr = [];
 
+var text_area_height = text_area.getBoundingClientRect().height;
+document.getElementById('inner-div').style.height = text_area_height+'px';
+
+// strlen($highlight['title']) > 38 ? substr($highlight['title'], 0, 38)."..." : $highlight['title']
+
 for (i = 0; i < h1tags.length; i++) {
-    var string = `<a href=#${i}>${h1tags[i].textContent}</a>`
-    h1tags[i].setAttribute('id', i)
+    var span_sidelink ;
+    // var span_sidelink = `<span class="side-link-span">${h1tags[i].textContent}</span>`;
+    var string = `<div class="position-relative"><a href=#${i}>${h1tags[i].textContent.length > 25 ? h1tags[i].textContent.substr(0,25) + '...' : h1tags[i].textContent}</a>` + `${h1tags[i].textContent.length > 25 ? span_sidelink : span_sidelink}` + `</div>`
     arr.push(string);
     side_link.innerHTML = side_link.innerHTML + arr[i];
 }
@@ -33,8 +39,6 @@ menu_btn.addEventListener('click', () => {
     sidebar_open.classList.add('high-opacity')
     sidebar_open.classList.remove('disable')
     sidebar_open.style.display = 'flex'
-    text_area.style.margin = '0 300px 0 120px'
-
 })
 
 sidebar_img.addEventListener('click', () => {
@@ -52,8 +56,6 @@ sidebar_img.addEventListener('click', () => {
     sidebar_open.classList.add('high-opacity')
     sidebar_open.classList.remove('disable')
     sidebar_open.style.display = 'flex'
-    text_area.style.margin = '0 300px 0 120px'
-
 })
 
 back_btn.addEventListener('click', () => {
@@ -70,8 +72,6 @@ back_btn.addEventListener('click', () => {
     menu_btn.classList.add('high-opacity')
     sidebar_open.classList.add('low-opacity')
     sidebar_open.classList.add('disable')
-    text_area.style.margin = '0 300px 0 120px'
-
 })
 
 var body = document.body;
@@ -87,3 +87,4 @@ document.addEventListener("scroll", function () {
         menu_btn.style.display = "none";
     }
 });
+
