@@ -1,0 +1,22 @@
+.tester {
+	margin: 150vh 50px;
+	height: 100px;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	margin: 0;
+	color: #555;
+}
+.tester {
+	outline: dashed 4px salmon;
+	color: salmon;
+}
+
+.tester {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
+	font-weight: 600;
+}
