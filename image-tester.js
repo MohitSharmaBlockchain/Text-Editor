@@ -1,6 +1,7 @@
 // The checker
 const inner_div = document.getElementById('inner-div')
 const inner_div_bound = sidebar_open.getBoundingClientRect().height + 27
+const menu_bound = menu_btn.getBoundingClientRect().height + 27
 
 const gambitGalleryIsInView = el => {
 	const scroll = window.scrollY || window.pageYOffset
@@ -8,15 +9,20 @@ const gambitGalleryIsInView = el => {
 	
 	const viewport = {
 		top: scroll,
-		bottom: scroll + inner_div_bound,
+		bottom: scroll + inner_div_bound + 50,
+		bottom2: scroll +  menu_bound + 50
 	}
     const bounds = {
 		top: boundsTop,
 		bottom: boundsTop + el.clientHeight,
 	}
+	console.log(( bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom2 ) )
 
-    return ( bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom ) 
-		|| ( bounds.top <= viewport.bottom && bounds.top >= viewport.top );
+	if(menu_btn.classList.contains('low-zindex')){
+		return ( bounds.top <= viewport.bottom && bounds.bottom >= viewport.top );
+	} else {
+		return ( bounds.top <= viewport.bottom2 && bounds.bottom >= viewport.top );
+	}
 }
 
 
