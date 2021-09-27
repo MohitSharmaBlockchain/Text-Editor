@@ -130,3 +130,30 @@ body {
 #inner-div{
     position: absolute;
 }
+.flex{
+    display: flex;
+}
+.tooltip{
+    position: absolute;
+    margin-top: 0.2rem;
+    margin-left: 1rem;
+    color: white;
+    background-color: black;
+    display: none;
+    z-index: 1000;
+    border-radius: 3px;
+    padding: 0.2rem 0.5rem 0.3rem 0.5rem;
+}
+.tooltip-up:hover + .tooltip{
+    display: block;
+}
+.tooltip:after {
+    position: absolute;
+    top: -6px;
+    left: 17px;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid black;
+    border-left: 6px solid transparent;
+    content: '';
+}

@@ -15,9 +15,10 @@ document.getElementById('inner-div').style.height = text_area_height+'px';
 // strlen($highlight['title']) > 38 ? substr($highlight['title'], 0, 38)."..." : $highlight['title']
 
 for (i = 0; i < h1tags.length; i++) {
+    h1tags[i].setAttribute('id',i)
     var span_sidelink ;
-    // var span_sidelink = `<span class="side-link-span">${h1tags[i].textContent}</span>`;
-    var string = `<div class="position-relative"><a href=#${i}>${h1tags[i].textContent.length > 25 ? h1tags[i].textContent.substr(0,25) + '...' : h1tags[i].textContent}</a>` + `${h1tags[i].textContent.length > 25 ? span_sidelink : span_sidelink}` + `</div>`
+    var tooltp = h1tags[i].textContent.length > 25 && span_sidelink
+    var string = `<div class="position-relative flex"><a class="tooltip-up" href=#${i}>${h1tags[i].textContent.length > 25 ? h1tags[i].textContent.substr(0,25) + '...' : h1tags[i].textContent}</a>` + `<span class="${h1tags[i].textContent.length > 25 && 'tooltip'}">${h1tags[i].textContent.length > 25 ? h1tags[i].textContent : ''}</span>` + `</div>`
     arr.push(string);
     side_link.innerHTML = side_link.innerHTML + arr[i];
 }
@@ -88,3 +89,13 @@ document.addEventListener("scroll", function () {
     }
 });
 
+var tooltip = document.querySelectorAll('.tooltip');
+
+document.addEventListener('mousemove', fn, false);
+
+function fn(e) {
+    for (var i=tooltip.length; i--;) {
+        tooltip[i].style.left = e.pageX - 100 + 'px';
+        tooltip[i].style.top = '45px';
+    }
+}
