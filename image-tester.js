@@ -28,16 +28,20 @@ const gambitGalleryIsInView = el => {
 
 // Usage.
 document.addEventListener( 'DOMContentLoaded', () => {
-	const tester = document.querySelector( '.tester' )
+	const tester = document.querySelectorAll( '.tester' )
 	
 	const handler = () => raf( () => {
 		var open = true;
-        if(gambitGalleryIsInView( tester )){
+
+		for(i=0;i<tester.length;i++){
+        if(gambitGalleryIsInView( tester[i] )){
 			inner_div.style.display = "none"
+			break;
         } 
 		else {
             inner_div.style.display = "block"
         }
+	}
 	} )
 	
 	handler()
